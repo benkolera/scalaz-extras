@@ -24,7 +24,7 @@ nextVersion := { ver =>
 
 //Make this publish to oss.sonatype.com later
 publishTo <<= version { (v: String) =>
-  val nexus = "http://nexus.benkolera.com/nexus"
+  val nexus = "http://nexus.benkolera.com/nexus/"
   if (v.trim.endsWith("SNAPSHOT"))
     Some("snapshots" at nexus + "content/repositories/snapshots/")
   else
